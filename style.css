@@ -1,0 +1,715 @@
+/* ===== Estilos generales ===== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #121218;
+  color: #e9e9ee;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Encabezado (usado en las demás páginas) ===== */
+header {
+  background-color: #1a1a2e;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* ===== Encabezado tipo AllAccess (header con topbar, solo en index.html) ===== */
+.header-principal {
+  background-color: #000000;
+}
+
+/* ===== Barra superior oscura estilo AllAccess (solo en index.html) ===== */
+.topbar {
+  background-color: #000000;
+  padding: 15px 30px;
+}
+
+.topbar .logo {
+  float: left;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.topbar-links {
+  float: right;
+}
+
+.topbar-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.topbar-links a:hover {
+  text-decoration: underline;
+}
+
+/* Este div limpia el float para que no se "rompa" el diseño */
+.topbar::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ===== Barra de búsqueda (solo en index.html) ===== */
+.searchbar {
+  background-color: #000000;
+  padding: 20px 30px 30px 30px;
+  text-align: center;
+}
+
+.searchbar input[type="text"] {
+  width: 60%;
+  max-width: 500px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.searchbar input[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  background-color: #1f1170;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ===== Menú de navegación ===== */
+nav {
+  background-color: #260c5d;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Contenido general ===== */
+.contenido {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contenido a {
+  color: #8ecae6;
+}
+
+.contenido a:hover {
+  color: #b9dff0;
+}
+
+h2 {
+  border-bottom: 2px solid #e63946;
+  padding-bottom: 5px;
+}
+
+/* ===== Banner de bienvenida (imagen grande de fondo) ===== */
+.banner {
+  width: 100%;
+}
+
+.banner img {
+  width: 100%;
+  height: 500px;
+  display: block;
+  object-fit: cover;
+  border: none;
+}
+
+/* ===== Cuadrícula de shows (portada) ===== */
+.grid-eventos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.grid-item {
+  overflow: hidden;
+  border-radius: 6px;
+  background-color: #1c1c26;
+}
+
+.grid-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.grid-item:hover img {
+  transform: scale(1.05);
+}
+
+/* ===== Tabla de eventos ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table, th, td {
+  border: 1px solid #999999;
+}
+
+th {
+  background-color: #1a1a2e;
+  color: white;
+  padding: 8px;
+}
+
+td {
+  padding: 8px;
+  text-align: center;
+  background-color: #1c1c26;
+  color: #e9e9ee;
+}
+
+td img {
+  width: 100px;
+}
+
+/* ===== Cajas de eventos (box) ===== */
+.caja {
+  display: inline-block;
+  width: 220px;
+  border: 2px solid #3a3a48;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #1c1c26;
+  color: #e9e9ee;
+  text-align: center;
+  vertical-align: top;
+}
+
+.caja img {
+  width: 100%;
+}
+
+/* ===== Botones ===== */
+.boton {
+  display: inline-block;
+  background-color: #e63946;
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 8px;
+}
+
+.boton:hover {
+  background-color: #b32d3a;
+}
+
+/* ===== Ficha de producto ===== */
+.producto-detalle img {
+  width: 300px;
+  float: left;
+  margin-right: 20px;
+  border: 3px solid #3a3a48;
+}
+
+/* ===== Formulario de compra ===== */
+form {
+  background-color: #1c1c26;
+  border: 2px solid #3a3a48;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+  color: #e9e9ee;
+}
+
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"],
+form input[type="password"],
+form input[type="number"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+  box-sizing: border-box;
+  background-color: #2a2a38;
+  color: #e9e9ee;
+  border: 1px solid #3a3a48;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form fieldset {
+  margin-top: 15px;
+  padding: 12px 15px;
+  border: 1px solid #3a3a48;
+  border-radius: 6px;
+}
+
+form legend {
+  font-weight: bold;
+  padding: 0 6px;
+}
+
+form .opcion-radio {
+  display: block;
+  font-weight: normal;
+  margin-top: 8px;
+}
+
+form .opcion-radio input[type="radio"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+.contador-caracteres {
+  text-align: right;
+  font-size: 0.85em;
+  color: #a9a9b8;
+  margin-top: 4px;
+}
+
+.contador-caracteres--limite {
+  color: #e63946;
+  font-weight: bold;
+}
+
+.boton-enviar {
+  margin-top: 20px;
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.boton-enviar:hover {
+  background-color: #b32d3a;
+}
+
+#resultado-encuesta:empty {
+  display: none;
+}
+
+.mensaje-exito,
+.mensaje-error-caja {
+  margin-top: 15px;
+  padding: 12px 15px;
+  border-radius: 6px;
+}
+
+.mensaje-exito {
+  background-color: #17301f;
+  border: 1px solid #2f7d46;
+  color: #b6f0c4;
+}
+
+.mensaje-error-caja {
+  background-color: #33161a;
+  border: 1px solid #b32d3a;
+}
+
+.mensaje-error {
+  color: #ff9aa5;
+  margin: 0;
+}
+
+form input[type="submit"] {
+  margin-top: 20px;
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #b32d3a;
+}
+
+/* ===== Pie de página ===== */
+footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  background-color: #1a1a2e;
+  color: white;
+}
+
+/* ===== Footer completo (info de contacto, pagos, redes) ===== */
+.footer-grande {
+  text-align: left;
+  padding: 30px 20px 15px;
+}
+
+.footer-columnas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto 25px;
+}
+
+.footer-col h3 {
+  color: white;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
+
+.footer-col p {
+  color: #cfcfd8;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.footer-col a {
+  display: block;
+  color: #cfcfd8;
+  text-decoration: none;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.footer-col a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer-logo {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.footer-contacto {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.footer-contacto li {
+  margin-bottom: 8px;
+  font-size: 0.88rem;
+  color: #cfcfd8;
+}
+
+.footer-contacto a {
+  display: inline;
+  color: #8ecae6;
+  margin-bottom: 0;
+}
+
+.footer-telefono {
+  color: #e63946;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.footer-pagos-redes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto 20px;
+  padding-top: 20px;
+  border-top: 1px solid #3a3a48;
+}
+
+.footer-pagos h4,
+.footer-redes h4 {
+  color: white;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+
+.pagos-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pago-chip {
+  background-color: #2a2a38;
+  border: 1px solid #3a3a48;
+  color: #e9e9ee;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.redes-lista {
+  display: flex;
+  gap: 10px;
+}
+
+.red-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #2a2a38;
+  border: 1px solid #3a3a48;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.red-icono:hover {
+  background-color: #3a3a48;
+}
+
+.footer-copy {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #a9a9b8;
+  margin: 0;
+  padding-top: 15px;
+  border-top: 1px solid #3a3a48;
+}
+
+/* =========================================================
+   ===== MEDIA QUERIES: adaptación a dispositivos móviles =====
+   ========================================================= */
+
+/* Tablets y pantallas medianas (hasta 768px) */
+@media (max-width: 768px) {
+
+  .contenido {
+    padding: 15px;
+  }
+
+  .banner img {
+    height: 300px;
+  }
+
+  .grid-eventos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .producto-detalle img {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  table, thead, tbody, tr {
+    display: block;
+    width: 100%;
+  }
+
+  tr {
+    margin-bottom: 15px;
+  }
+
+  td img {
+    width: 80px;
+  }
+
+  .footer-columnas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Celulares (hasta 480px) */
+@media (max-width: 480px) {
+
+  .topbar {
+    padding: 10px 15px;
+    text-align: center;
+  }
+
+  .topbar .logo {
+    float: none;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .topbar-links {
+    float: none;
+  }
+
+  .topbar-links a {
+    display: inline-block;
+    margin: 0 8px;
+    font-size: 12px;
+  }
+
+  .searchbar {
+    padding: 15px;
+  }
+
+  .searchbar input[type="text"] {
+    width: 100%;
+    max-width: none;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .searchbar input[type="submit"] {
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 5px 8px;
+    font-size: 13px;
+  }
+
+  .banner img {
+    height: 180px;
+  }
+
+  .grid-eventos {
+    grid-template-columns: 1fr;
+  }
+
+  .caja {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  form {
+    max-width: 100%;
+  }
+
+  .footer-columnas {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer-pagos-redes {
+    flex-direction: column;
+  }
+}
+
+/* =========================================================
+   Sesión de usuario (login / registro / mis compras)
+   ========================================================= */
+
+/* El atributo hidden debe ganarle a cualquier display definido en el CSS */
+[hidden] {
+  display: none !important;
+}
+
+.nav-sesion {
+  display: inline-block;
+  margin-left: 15px;
+  padding-left: 15px;
+  border-left: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.nav-saludo {
+  color: #ffd166;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+.boton-salir {
+  margin: 0 5px;
+  background: transparent;
+  color: white;
+  border: 1px solid #e63946;
+  border-radius: 5px;
+  padding: 4px 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.boton-salir:hover {
+  background-color: #e63946;
+}
+
+/* Cajas de mensajes de los formularios (info / exito / error) */
+.mensaje-box {
+  margin: 10px 0;
+  padding: 10px 14px;
+  border-radius: 6px;
+}
+
+.mensaje-box:empty {
+  display: none;
+}
+
+.mensaje-box.info {
+  background-color: #14233a;
+  border: 1px solid #3a6ea5;
+  color: #bcd8f5;
+}
+
+.mensaje-box.exito {
+  background-color: #17301f;
+  border: 1px solid #2f7d46;
+  color: #b6f0c4;
+}
+
+.mensaje-box.error {
+  background-color: #33161a;
+  border: 1px solid #b32d3a;
+  color: #ff9aa5;
+}
+
+.aviso-sesion,
+.tarjeta-usuario {
+  padding: 15px 20px;
+  border: 1px solid #3a3a48;
+  border-radius: 8px;
+  background-color: #1c1c26;
+  margin: 15px 0;
+}
+
+.aviso-sesion p,
+.tarjeta-usuario p {
+  margin: 6px 0;
+}

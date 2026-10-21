@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TicketShow - Encuesta de Satisfacción</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>🎟️ TicketShow</h1>
+    <p>Tu entrada a los mejores shows en vivo</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="listado_tabla.html">Listado (Tabla)</a>
+    <a href="listado_box.html">Listado (Cajas)</a>
+    <a href="producto.html">Ficha de Ticket</a>
+    <a href="comprar.html">Comprar</a>
+    <a href="encuesta.html">Encuesta</a>
+  </nav>
+
+  <main>
+  <div class="contenido">
+    <h2>Encuesta de Satisfacción del Usuario</h2>
+    <p>Contanos cómo fue tu experiencia comprando entradas en TicketShow. Nos ayuda a mejorar el servicio.</p>
+
+    <form id="formulario-encuesta">
+
+      <fieldset>
+        <legend>¿Qué tan satisfecho/a quedaste con tu compra?</legend>
+
+        <label class="opcion-radio">
+          <input type="radio" name="satisfaccion" value="Muy satisfecho">
+          Muy satisfecho
+        </label>
+        <label class="opcion-radio">
+          <input type="radio" name="satisfaccion" value="Satisfecho">
+          Satisfecho
+        </label>
+        <label class="opcion-radio">
+          <input type="radio" name="satisfaccion" value="Neutral">
+          Neutral
+        </label>
+        <label class="opcion-radio">
+          <input type="radio" name="satisfaccion" value="Insatisfecho">
+          Insatisfecho
+        </label>
+        <label class="opcion-radio">
+          <input type="radio" name="satisfaccion" value="Muy insatisfecho">
+          Muy insatisfecho
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>¿Recomendarías TicketShow a un amigo?</legend>
+
+        <label class="opcion-radio">
+          <input type="radio" name="recomendacion" value="Sí">
+          Sí
+        </label>
+        <label class="opcion-radio">
+          <input type="radio" name="recomendacion" value="No">
+          No
+        </label>
+      </fieldset>
+
+      <label for="comentario">Contanos más sobre tu experiencia (opcional):</label>
+      <textarea id="comentario" name="comentario" maxlength="300" rows="4" placeholder="Ej: El proceso de compra fue rápido y sin problemas..."></textarea>
+      <p id="contador-caracteres" class="contador-caracteres">300 caracteres restantes</p>
+
+      <button type="submit" class="boton-enviar">Enviar encuesta</button>
+
+      <div id="resultado-encuesta" aria-live="polite"></div>
+
+    </form>
+  </div>
+  </main>
+
+  <footer class="footer-grande">
+    <div class="footer-columnas">
+
+      <div class="footer-col">
+        <h3>Información de contacto</h3>
+        <div class="footer-logo">🎟️ TICKETSHOW</div>
+        <p>Desarrollado como proyecto académico, con el objetivo de difundir shows,
+          recitales y espectáculos en vivo, y ser el enlace directo para conseguir
+          tus entradas a los mejores eventos.</p>
+        <ul class="footer-contacto">
+          <li>📍 Av. Corrientes 1500, Buenos Aires, Argentina</li>
+          <li>✉️ <a href="mailto:ticketshow@gmail.com">ticketshow@gmail.com</a></li>
+          <li>📱 WhatsApp: <a href="https://wa.me/541112345678">+54 11 1234-5678</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Comuníquese con nosotros</h3>
+        <p>Llámenos al teléfono</p>
+        <p class="footer-telefono">+54 11 1234-5678</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Mi cuenta</h3>
+        <a href="login.html">Mi cuenta</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Más opciones</h3>
+        <a href="support.html">Sobre nosotros</a>
+        <a href="index.html">Novedades</a>
+        <a href="support.html">Contacte con nosotros</a>
+      </div>
+
+    </div>
+
+    <div class="footer-pagos-redes">
+      <div class="footer-pagos">
+        <h4>Aceptamos distintos medios de pago</h4>
+        <div class="pagos-lista">
+          <span class="pago-chip">Mercado Pago</span>
+          <span class="pago-chip">Visa</span>
+          <span class="pago-chip">Mastercard</span>
+          <span class="pago-chip">Amex</span>
+          <span class="pago-chip">Transferencia</span>
+        </div>
+      </div>
+      <div class="footer-redes">
+        <h4>Síguenos en las redes</h4>
+        <div class="redes-lista">
+          <a href="#" class="red-icono" aria-label="Instagram">📷</a>
+          <a href="#" class="red-icono" aria-label="Facebook">👍</a>
+        </div>
+      </div>
+    </div>
+
+    <p class="footer-copy">TicketShow &copy; 2026 - Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>

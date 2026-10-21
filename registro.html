@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TicketShow - Crear cuenta</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== Encabezado del sitio ===== -->
+  <header class="header-principal">
+    <div class="topbar">
+      <div class="logo">🎟️ TICKETSHOW</div>
+      <div class="topbar-links">
+        <a href="support.html">SOPORTE</a>
+        <a href="login.html" id="enlace-ingreso">INGRESAR / REGISTRARSE</a>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="listado_tabla.html">Listado (Tabla)</a>
+    <a href="listado_box.html">Listado (Cajas)</a>
+    <a href="producto.html">Ficha de Ticket</a>
+    <a href="comprar.html">Comprar</a>
+  <a href="encuesta.html">Encuesta</a>
+  </nav>
+
+  <main>
+  <div class="contenido">
+    <div class="caja-login">
+
+      <h2>Crear cuenta</h2>
+      <p>¿Ya tenés una cuenta? <a href="login.html">Ingresá aquí</a></p>
+
+      <div id="msg-registro" class="mensaje-box" aria-live="polite"></div>
+
+      <form id="form-registro" novalidate>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="E-mail">
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" placeholder="Contraseña (mínimo 6 caracteres)" autocomplete="new-password">
+
+        <label for="password2">Confirmar contraseña:</label>
+        <input type="password" id="password2" name="password2" placeholder="Confirmar contraseña">
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" placeholder="Apellido">
+
+        <label for="pais">País de residencia:</label>
+        <select id="pais" name="pais">
+          <option value="argentina">Argentina</option>
+          <option value="chile">Chile</option>
+          <option value="uruguay">Uruguay</option>
+          <option value="paraguay">Paraguay</option>
+          <option value="brasil">Brasil</option>
+        </select>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Ej: 11-2345-6789">
+
+        <label for="tipo_doc">Tipo de documento:</label>
+        <select id="tipo_doc" name="tipo_doc">
+          <option value="dni">Número de DNI</option>
+          <option value="pasaporte">Pasaporte</option>
+        </select>
+
+        <label for="doc">Número de documento:</label>
+        <input type="text" id="doc" name="doc" placeholder="Número de documento">
+
+        <label for="nacimiento">Fecha de nacimiento:</label>
+        <input type="text" id="nacimiento" name="nacimiento" placeholder="DD/MM/AAAA">
+
+        <label for="genero">Género:</label>
+        <select id="genero" name="genero">
+          <option value="">Seleccioná tu género</option>
+          <option value="femenino">Femenino</option>
+          <option value="masculino">Masculino</option>
+          <option value="otro">Otro</option>
+          <option value="prefiero_no_decir">Prefiero no decir</option>
+        </select>
+
+        <p><input type="checkbox" id="newsletter" name="newsletter">
+        <label for="newsletter" class="check-label">Suscribirme al newsletter y recibir novedades de giras y espectáculos</label></p>
+
+        <input type="submit" value="Registrarme">
+
+      </form>
+
+    </div>
+  </div>
+  </main>
+
+  <footer class="footer-grande">
+    <div class="footer-columnas">
+
+      <div class="footer-col">
+        <h3>Información de contacto</h3>
+        <div class="footer-logo">🎟️ TICKETSHOW</div>
+        <p>Desarrollado como proyecto académico, con el objetivo de difundir shows,
+          recitales y espectáculos en vivo, y ser el enlace directo para conseguir
+          tus entradas a los mejores eventos.</p>
+        <ul class="footer-contacto">
+          <li>📍 Av. Corrientes 1500, Buenos Aires, Argentina</li>
+          <li>✉️ <a href="mailto:ticketshow@gmail.com">ticketshow@gmail.com</a></li>
+          <li>📱 WhatsApp: <a href="https://wa.me/541112345678">+54 11 1234-5678</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Comuníquese con nosotros</h3>
+        <p>Llámenos al teléfono</p>
+        <p class="footer-telefono">+54 11 1234-5678</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Mi cuenta</h3>
+        <a href="login.html">Mi cuenta</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Más opciones</h3>
+        <a href="support.html">Sobre nosotros</a>
+        <a href="index.html">Novedades</a>
+        <a href="support.html">Contacte con nosotros</a>
+      </div>
+
+    </div>
+
+    <div class="footer-pagos-redes">
+      <div class="footer-pagos">
+        <h4>Aceptamos distintos medios de pago</h4>
+        <div class="pagos-lista">
+          <span class="pago-chip">Mercado Pago</span>
+          <span class="pago-chip">Visa</span>
+          <span class="pago-chip">Mastercard</span>
+          <span class="pago-chip">Amex</span>
+          <span class="pago-chip">Transferencia</span>
+        </div>
+      </div>
+      <div class="footer-redes">
+        <h4>Síguenos en las redes</h4>
+        <div class="redes-lista">
+          <a href="#" class="red-icono" aria-label="Instagram">📷</a>
+          <a href="#" class="red-icono" aria-label="Facebook">👍</a>
+        </div>
+      </div>
+    </div>
+
+    <p class="footer-copy">TicketShow &copy; 2026 - Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>

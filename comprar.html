@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TicketShow - Comprar Entradas</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>🎟️ TicketShow</h1>
+    <p>Tu entrada a los mejores shows en vivo</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="listado_tabla.html">Listado (Tabla)</a>
+    <a href="listado_box.html">Listado (Cajas)</a>
+   <a href="producto.html">Ficha de Ticket</a>
+    <a href="comprar.html">Comprar</a>
+  <a href="encuesta.html">Encuesta</a>
+  </nav>
+
+  <main>
+  <div class="contenido">
+    <h2>Formulario de Compra</h2>
+
+    <!-- Visitantes sin sesión: no pueden comprar -->
+    <div id="compra-requiere-login" class="aviso-sesion" data-visible="invitado" hidden>
+      <p>Para comprar entradas tenés que iniciar sesión.</p>
+      <p><a href="login.html">Ingresar</a> o <a href="registro.html">crear una cuenta</a>.</p>
+    </div>
+
+    <form id="formulario-compra" data-visible="sesion" hidden novalidate>
+
+      <label for="nombre">Nombre del cliente:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez">
+
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" name="direccion" placeholder="Ej: Av. Siempre Viva 123">
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" placeholder="Ej: 11-2345-6789">
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="Ej: juan@correo.com">
+
+      <label for="pago">Medio de pago:</label>
+      <select id="pago" name="pago">
+        <option value="tarjeta_credito">Tarjeta de crédito</option>
+        <option value="tarjeta_debito">Tarjeta de débito</option>
+        <option value="transferencia">Transferencia bancaria</option>
+        <option value="efectivo">Efectivo (Pago Fácil / Rapipago)</option>
+      </select>
+
+      <label for="tickets">Ticket seleccionado:</label>
+      <select id="tickets" name="tickets">
+        <option value="bts">BTS World Tour ($45.000)</option>
+        <option value="olivia">Olivia Wald($80.000)</option>
+        <option value="maroon5">Maroon 5 ($75.000)</option>
+        <option value="calamaro">CALAMARO ($65.000)</option>
+      </select>
+
+      <input type="submit" value="Confirmar compra">
+
+      <div id="confirmacion-compra" aria-live="polite"></div>
+
+    </form>
+  </div>
+  </main>
+
+  <footer class="footer-grande">
+    <div class="footer-columnas">
+
+      <div class="footer-col">
+        <h3>Información de contacto</h3>
+        <div class="footer-logo">🎟️ TICKETSHOW</div>
+        <p>Desarrollado como proyecto académico, con el objetivo de difundir shows,
+          recitales y espectáculos en vivo, y ser el enlace directo para conseguir
+          tus entradas a los mejores eventos.</p>
+        <ul class="footer-contacto">
+          <li>📍 Av. Corrientes 1500, Buenos Aires, Argentina</li>
+          <li>✉️ <a href="mailto:ticketshow@gmail.com">ticketshow@gmail.com</a></li>
+          <li>📱 WhatsApp: <a href="https://wa.me/541112345678">+54 11 1234-5678</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Comuníquese con nosotros</h3>
+        <p>Llámenos al teléfono</p>
+        <p class="footer-telefono">+54 11 1234-5678</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Mi cuenta</h3>
+        <a href="login.html">Mi cuenta</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Más opciones</h3>
+        <a href="support.html">Sobre nosotros</a>
+        <a href="index.html">Novedades</a>
+        <a href="support.html">Contacte con nosotros</a>
+      </div>
+
+    </div>
+
+    <div class="footer-pagos-redes">
+      <div class="footer-pagos">
+        <h4>Aceptamos distintos medios de pago</h4>
+        <div class="pagos-lista">
+          <span class="pago-chip">Mercado Pago</span>
+          <span class="pago-chip">Visa</span>
+          <span class="pago-chip">Mastercard</span>
+          <span class="pago-chip">Amex</span>
+          <span class="pago-chip">Transferencia</span>
+        </div>
+      </div>
+      <div class="footer-redes">
+        <h4>Síguenos en las redes</h4>
+        <div class="redes-lista">
+          <a href="#" class="red-icono" aria-label="Instagram">📷</a>
+          <a href="#" class="red-icono" aria-label="Facebook">👍</a>
+        </div>
+      </div>
+    </div>
+
+    <p class="footer-copy">TicketShow &copy; 2026 - Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>
